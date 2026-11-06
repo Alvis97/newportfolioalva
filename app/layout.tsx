@@ -22,11 +22,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
       <div className="fixed w-full h-full flex justify-between items-between inset-0 -z-10 bg-[var(--background)]">
-        <div className="animate-wiggle flex justify-center items-center self-end h-40 w-30 rounded-full blur-3xl bg-[var(--pink)]/30">
-          <div className="h-20 w-15 rounded-full blur-2xl bg-[var(--pink)]/30"></div>
+        <div className="animate-wiggle flex justify-center items-center self-end h-40 w-30 rounded-full blur-3xl bg-[var(--pink)]/30 md:h-55 md:w-50 md:mb-10 md:bg-[var(--pink)]/20">
+          <div className="h-20 w-15 rounded-full blur-2xl bg-[var(--pink)]/30 md:bg-[var(--pink)]/20"></div>
         </div>
-        <div className="animate-wiggle flex justify-center items-center self-start h-30 w-40 rounded-full blur-3xl bg-[var(--pink)]/30">
-          <div className="h-20 w-15 rounded-full blur-2xl bg-[var(--pink)]/30"></div>
+        <div className="animate-wiggle [animation-delay:500ms] flex justify-center items-center self-start h-30 w-40 rounded-full blur-3xl bg-[var(--pink)]/30 md:h-40 md:w-50 md:mt-10 md:bg-[var(--pink)]/20">
+          <div className="h-20 w-15 rounded-full blur-2xl bg-[var(--pink)]/30 md:bg-[var(--pink)]/20"></div>
         </div>
         </div>  
         {children}
