@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #F2E9E7;
-  --foreground: #392B2B;
+  --foreground: #76544F;
+  --textColor: #392B2B;
   --pink: #F0B673;
   --darkBrown: #392B2B;
   --lightBrown: #76544F;
@@ -19,14 +21,14 @@
   --font-display: var(--font-manrope);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+.dark {
+  color-scheme: dark; 
   --background: #211B1B;
-  --foreground: #F2E9E7;
+  --foreground:  #D4A69D;
+  --textColor: #F2E9E7;
   --pink: #D4A69D;
   --darkBrown: #392B2B;
   --lightBrown: #76544F;
-  }
 }
 
 body {
@@ -36,7 +38,7 @@ body {
 }
 
 a{
-  color: var(--pink);
+  color: var(--foreground);
   font-family: var(--manrope);
   letter-spacing: 3px;
   transition: 1s;
