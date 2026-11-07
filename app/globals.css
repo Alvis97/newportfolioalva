@@ -5,9 +5,10 @@
   --background: #F2E9E7;
   --foreground: #76544F;
   --textColor: #392B2B;
-  --pink: #F0B673;
-  --darkBrown: #392B2B;
+  --pink: #f3a041;
+  --darkBrown: #ecddd8;
   --lightBrown: #76544F;
+  --green: #879869;
 }
 
 @theme inline {
@@ -16,6 +17,7 @@
   --color-pink: var(--pink);
   --color-darkBrown: var(--darkBrown);
   --color-lightBrown: var(--lightBrown);
+  --color-green: var(--green);
 
   --font-sans: var(--font-inter);
   --font-display: var(--font-manrope);
@@ -29,6 +31,7 @@
   --pink: #D4A69D;
   --darkBrown: #392B2B;
   --lightBrown: #76544F;
+  --green: #A4B999;
 }
 
 body {
@@ -39,13 +42,30 @@ body {
 
 a{
   color: var(--foreground);
-  font-family: var(--manrope);
-  letter-spacing: 3px;
+  font-family: var(--font-manrope);
+  letter-spacing: 1px;
   transition: 1s;
 }
 
 a:hover{
   scale: 1.1;
+}
+
+h1{
+  color: var(--textColor);
+  font-weight: 900;
+  font-family: var(--font-manrope);
+}
+
+h2{
+  color: var(--foreground);
+  font-weight: 700;
+  font-family: var(--font-manrope);
+  line-height: 1.25rem;
+}
+
+p{
+  font-family: var(--font-inter);
 }
 
 

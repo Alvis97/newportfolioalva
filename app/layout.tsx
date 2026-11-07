@@ -12,8 +12,6 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
