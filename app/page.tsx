@@ -3,6 +3,7 @@ import Navigation from "../app/components/Navigation"
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage"
 import AboutPage from "./components/AboutPage";
+import ProjectPage from "./components/ProjectPage";
 
 export default function Home() {
   return (
@@ -18,6 +19,10 @@ export default function Home() {
          
         <section id="about" className="flex min-h-full shrink-0 snap-start flex-col justify-center py-10">
           <AboutPage />
+        </section>
+
+        <section id="about" className="flex min-h-full shrink-0 snap-start flex-col justify-center py-10">
+          <ProjectPage />
         </section>
       </main>
 
