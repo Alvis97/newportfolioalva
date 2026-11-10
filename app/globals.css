@@ -14,6 +14,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-textColor: var(--textColor);
   --color-pink: var(--pink);
   --color-darkBrown: var(--darkBrown);
   --color-lightBrown: var(--lightBrown);
@@ -66,6 +67,10 @@ h2{
 
 p{
   font-family: var(--font-inter);
+}
+
+span{
+  margin-bottom: 10px;
 }
 
 
