@@ -1,23 +1,8 @@
 "use client"
 
 import React from 'react'
-
-const projects = [
-    {
-    id: "1", 
-    img: "",   
-    projectName: "01_sol-swap",
-    tools: "React · TypeScript · Solana",
-    link: ""
-    },
-    {
-    id: "2",
-    img: "",    
-    projectName: "02_wallet-dashboard",
-    tools:  "React · TypeScript · Solana",
-    link: "" 
-    }
-]
+import { projects } from "../data/projectData"
+import Link from 'next/link'
 
 function ProjectPage() {
   return (
@@ -25,23 +10,23 @@ function ProjectPage() {
         <div className='bg-[var(--darkBrown)] p-3 rounded-xl w-xs md:w-xl'>
             <div className='flex justify-between items-center border-b border-b-[var(--foreground)] pb-2'>
                 <p className='text-xs md:text-base text-[var(--foreground)]'>Projects/</p>
-                <p className='text-xs md:text-base'>02 ITEMS</p>
+                <p className='text-xs md:text-base'>{projects.length.toString().padStart(2, "0")} ITEMS</p>
             </div>
             <ul>
-            {projects.map(projects => {
+            {projects.map(projectItem => {
                 return (
                     <li 
-                    key={projects.id}
-                    className='border-b py-3 flex items-center'>
+                    key={projectItem.id}
+                    className='border-b py-4 px-1 flex items-center'>
                         <img 
-                        src={projects.img} 
-                        alt={projects.projectName}
-                        className='h-30 w-30 xl:h-40 xl:w-40' 
+                        src={projectItem.cardImage} 
+                        alt={projectItem.cardTitle}
+                        className='h-25 w-25 rounded-sm xl:h-30 xl:w-30' 
                         />
-                        <div>
-                            <h2 className='text-base mb-1 md:text-xl md:mb-2' >{projects.projectName}</h2>
-                            <p className='text-sm md:text-base'>{projects.tools}</p>
-                            <a href="" className='text-sm md:text-base'>View project</a>
+                        <div className='pl-4'>
+                            <h2 className='text-base mb-1 md:text-xl md:mb-2' >{projectItem.cardTitle}</h2>
+                            <p className='text-sm md:text-base'>{projectItem.cardTool}</p>
+                            <Link href={`/projects/${projectItem.slug}`} className='text-sm md:text-base'>View project</Link>
                         </div>
                     </li>
                 )

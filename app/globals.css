@@ -59,7 +59,6 @@ h1{
 }
 
 h2{
-  color: var(--foreground);
   font-weight: 700;
   font-family: var(--font-manrope);
   line-height: 1.25rem;
