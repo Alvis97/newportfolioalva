@@ -2,11 +2,25 @@ import React, { ReactNode } from 'react'
 import { projects } from "../../data/projectData"
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
-import { div, li } from 'motion/react-client'
+import { div, li, ul } from 'motion/react-client'
+import { Suspense } from 'react'
+
+
+export function generateStaticParams() {
+    return projects.map((p) => ({ sluh: p.slug}))
+}
 
 export default async function Page({params}: {params: Promise<{ slug: string }>}) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+        <ProjectContent params={params}/>
+    </Suspense>
+  );
+}
+
+async function ProjectContent({ params,}: {params: Promise<{slug: string }>}) {
     const { slug } = await params
-    const pj = projects.find(p => p.slug === slug)
+    const pj = projects.find((p) => p.slug === slug)
 
     if (!pj) return <div>Project not found</div>
   return (
@@ -26,9 +40,9 @@ export default async function Page({params}: {params: Promise<{ slug: string }>}
                 <div >
                     <p className='text-base mb-2 mt-5'>Tech-Stack:</p>
                     <ul className='flex gap-2 flex-wrap'>
-                        {pj.techStack.map(tech => {
+                        {pj.techStack.map((tech, i) => {
                             return (
-                                <li className='border border-[var(--pink)] py-1 px-2 w-fit rounded-sm'>
+                                <li key={i} className='border border-[var(--pink)] py-1 px-2 w-fit rounded-sm'>
                                     <p className='text-xs md:text-sm'>{tech}</p>
                                 </li>
                             )
@@ -56,24 +70,52 @@ export default async function Page({params}: {params: Promise<{ slug: string }>}
 
             <div className='lg:w-[50vw]'>
                 <h3 className='text-xl font-bold'>Technical challenges</h3>
-                <p className='mt-2'>{pj.challenges}</p>
+                <p className='mt-2'>{pj.learned}</p>
             </div>
         </div>
 
         <div>
             <h3>Flow</h3>
-            <p>{pj.flow}</p>
+            <ul>
+                {pj.flow.map((section, i) => {
+                    return(
+                        <li key={i}>
+                            <h4>{section.title}</h4>
+                            <p>{section.text}</p>
+                        </li>
+                    )
+                })}
+            </ul>
         </div>
 
         <div>
             <h3>Security</h3>
-            <p>{pj.security}</p>
+            <ul>
+                {pj.security.map((section, i) => {
+                return(
+                    <li key={i}>
+                        <h4>{section.title}</h4>
+                        <p>{section.text}</p>
+                    </li> 
+                )
+            })}
+            </ul>
         </div>
 
-<div>
-    <h3>Roadmap</h3>
-    <p>{pj.roadmap}</p>
-</div>
+        <div>
+            <h3>Roadmap</h3>
+            <p>{pj.roadmapIntro}</p>
+            <ul>
+            {pj.roadmap.map((section, i) => { 
+                return(
+                    <li key={i}>
+                    <h4>{section.title}</h4>
+                    <p>{section.text}</p>
+                    </li>   
+                )
+            })} 
+            </ul>
+        </div>
 
 
        
@@ -85,5 +127,6 @@ export default async function Page({params}: {params: Promise<{ slug: string }>}
      </div>
 
     </div>
-  );
+  )
 }
+
