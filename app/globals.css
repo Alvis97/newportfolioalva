@@ -41,35 +41,53 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@layer base{
 a{
   color: var(--foreground);
   font-family: var(--font-manrope);
   letter-spacing: 1px;
   transition: 1s;
+  @apply text-sm
 }
 
 a:hover{
   scale: 1.1;
 }
+}
 
+
+@layer base{
 h1{
   color: var(--textColor);
   font-weight: 900;
   font-family: var(--font-manrope);
+  @apply text-3xl lg:text-5xl;
+}
 }
 
+
+@layer base {
 h2{
   font-weight: 700;
   font-family: var(--font-manrope);
-  line-height: 1.25rem;
+  @apply text-base lg:text-xl;
+}
 }
 
-p{
-  font-family: var(--font-inter);
+@layer base {
+h3{
+  font-weight: 700;
+  font-family: var(--font-manrope);
+  @apply text-base lg:text-xl;
+}
 }
 
-span{
-  margin-bottom: 10px;
+@layer base {
+  p {
+    font-weight: 400;
+    font-family: var(--font-inter);
+    @apply text-sm lg:text-base;
+  }
 }
 
 
@@ -87,4 +105,6 @@ span{
     }
   }
 }
+
+
 

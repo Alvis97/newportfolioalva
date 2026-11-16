@@ -15,7 +15,7 @@ function AboutPage() {
 function TechList() {
     return (
        <div className='flex flex-col md:items-center'>
-        <h3 className='mb-2 text-sm text-[var(--textColor)]'>Tech I work with:</h3>
+        <h3 className='mb-2 text-[var(--textColor)]'>Tech I work with:</h3>
         <ul className='flex flex-wrap gap-2 max-w-80 min-w-60 md:justify-center'>
             {tech.map((item) => (
                 <li
@@ -51,9 +51,9 @@ function TechList() {
 
       {/* text */}
       <div className='flex w-full max-w-xl flex-col'>
-        <h1 className='mb-3 text-2xl md:text-4xl'>Hi, I’m Alva!</h1>
+        <h1 className='mb-3'>Hi, I’m Alva!</h1>
 
-        <div className='flex flex-col gap-3 text-sm text-[var(--textColor)] md:text-base md:max-w-124'>
+        <div className='flex flex-col gap-3 text-[var(--textColor)] md:max-w-124'>
           <p>
             I’m a junior frontend developer based in Sweden with a bachelor’s degree in
             Web Development from SAE Institute London. Over the past year I’ve developed

@@ -17,6 +17,7 @@ export type Project = {
    linkGit: string
    video: string
    image: string[]
+   squareImg: string[]
    features: string[]
    flow: items[]
    security: items[]
@@ -46,6 +47,7 @@ export const projects: Project[] = [
         linkGit: "",
         video: "/SwapGif.gif",
         image: [],
+        squareImg: ["/SquareError.png", "/SquareLoading.png", "/SquareFailedSwap.png", "/SquareQuote.png", "/SquareSOL.png", "/SquareSuccessSwap.png", "/SquareWalletBtn.png", "/SquareSlippage.png"],
         features: ["Connecting Solana Wallet/Phantom",
                     "Get current SOL-prices with or without connecting your Wallet",
                     "Manual slipade options, get quote with transactionFee, slipade and estimated amount",
@@ -119,6 +121,7 @@ export const projects: Project[] = [
         linkGit: "",
         video: "/DashboardWalletVideo.gif",
         image: ["/landingpage.png", "/tokenPage.png", "/NftPage.png"],
+        squareImg: [],
         features: ["View your SOL balance in real time", 
                     "Track your token holdings with live 24h price changes",
                     "Browse your full NFT collection",
@@ -144,7 +147,7 @@ export const projects: Project[] = [
         }],            
         security: [
             {
-                title: "Server-side validation (zod)",
+                title: "Server-side validation (zod):",
                 text: "Every request is checked on the server. Only SOL and USDC are allowed, slippage has a maximum, and the amount is capped at about $2. I check on the server because the checks in the browser can be skipped. Anyone who calls the API directly still gets rejected."
             }, {
                 title: "Rate limiting and origin check:",

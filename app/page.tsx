@@ -21,7 +21,7 @@ export default function Home() {
           <AboutPage />
         </section>
 
-        <section id="about" className="flex min-h-full shrink-0 snap-start flex-col justify-center py-10">
+        <section id="projects" className="flex min-h-full shrink-0 snap-start flex-col justify-center py-10">
           <ProjectPage />
         </section>
       </main>
