@@ -58,7 +58,7 @@ function TechList() {
             I’m a junior frontend developer based in Sweden with a bachelor’s degree in
             Web Development from SAE Institute London. Over the past year I’ve developed
             a growing interest in blockchain technology, particularly the Solana
-            ecosystem, and recently built and secured a <span><a href="" className='font-semibold'>Solana swap app</a></span>.
+            ecosystem, and recently built and secured a <span><a href="#projects" className=' text-[var(--foreground)] underline'>Solana swap app</a></span>.
           </p>
           <p>
             I’m naturally curious and enjoy exploring new ideas, learning new

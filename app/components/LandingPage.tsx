@@ -5,7 +5,7 @@ import { FaRegCircle, FaCircle } from "react-icons/fa6";
 
 function LandingPage() {
   return (
-    <div className='flex flex-col flex-1 gap-10 justify-evenly items-center w-full py-3'>
+    <div className='flex flex-col flex-1 gap-7 justify-evenly items-center w-full'>
         <div className='w-[90%] text-center'>
             <p className='text-xs text-[var(--green)] mb-5'>
               AVAILABLE FOR OPPORTUNITIES
