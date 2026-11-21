@@ -19,7 +19,7 @@ function Footer() {
         }
     }
   return (
-    <div className='flex justify-between items-center h-14 border-t border-t-[var(--foreground)] text-[var(--foreground)] w-[98vw] mx-auto'>
+    <div className='flex justify-between items-center h-14 border-t border-t-[var(--foreground)] text-[var(--foreground)] w-[95vw] md:w-[95vw] mx-auto'>
         <span className='text-sm'>CONTACT ME:</span>
         <div className='flex gap-3 items-center'>
             <div className='relative flex items-center justify-center group'>

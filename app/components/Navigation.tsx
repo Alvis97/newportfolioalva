@@ -8,7 +8,7 @@ function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className='flex justify-between items-center w-[98vw] mx-auto h-14 border-b border-b-[var(--foreground)] text-[var(--foreground)]'>
+    <div className='flex justify-between items-center w-[95vw] md:w-[95vw] mx-auto h-14 border-b border-b-[var(--foreground)] text-[var(--foreground)]'>
         <span className='text-sm'>ALVA JONSSON</span>
 
         <div className='md:hidden'>

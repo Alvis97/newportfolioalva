@@ -8,7 +8,7 @@ function ProjectPage() {
     <div className='flex flex-1 justify-center items-center w-full py-7'>
         <div className='bg-[var(--darkBrown)] p-3 rounded-xl w-sm md:w-xl'>
             <div className='flex justify-between items-center border-b border-b-[var(--foreground)] pb-2 w-fill'>
-                <h1 className='text-sm text-[var(--textColor)]'>Projects/</h1>
+                <h1 className='text-sm font-semibold text-[var(--textColor)]/50'>Projects/</h1>
                 <p className='text-[var(--textColor)]/50'>{projects.length.toString().padStart(2, "0")} ITEMS</p>
             </div>
             <ul>
@@ -23,9 +23,9 @@ function ProjectPage() {
                         className='h-25 w-25 rounded-sm xl:h-30 xl:w-30' 
                         />
                         <div className='pl-4'>
-                            <h2 className='text-base font-bold text-[color:var(--textColor)] mb-1 md:mb-2' >{projectItem.cardTitle}</h2>
+                            <h2 className='text-lg font-bold text-[color:var(--textColor)] mb-1 md:mb-2' >{projectItem.cardTitle}</h2>
                             <p className='text-[var(--textColor)]/50'>{projectItem.cardTool}</p>
-                            <Link className='flex items-center' href={`/projects/${projectItem.slug}`}>View project <MdArrowOutward/></Link>
+                            <Link className='flex items-center hover:underline hover:scale-none' href={`/projects/${projectItem.slug}`}>View project <MdArrowOutward/></Link>
                         </div>
                     </li>
                 )

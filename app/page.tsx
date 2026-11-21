@@ -8,7 +8,7 @@ import ProjectPage from "./components/ProjectPage";
 export default function Home() {
   return (
     <div className="mx-auto flex h-full flex-col flex-1 w-[90vw] font-sans md:w-[95vw]">
-      <header className="fixed inset-x-0 top-0 z-50 shrink-0 w-full">
+      <header className="fixed inset-x-0 top-0 z-50 shrink-0 w-full bg-[var(--background)]/70">
         <Navigation/>
       </header>
       
@@ -26,7 +26,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="fixed inset-x-0 bottom-0 z-50 w-full shrink-0 bg-[var(--background)]/80 backdrop-blur" >
+      <footer className="fixed inset-x-0 bottom-0 z-50 w-full shrink-0 bg-[var(--background)]/70" >
         <Footer/>
       </footer>
     </div>
