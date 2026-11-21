@@ -7,7 +7,9 @@ export type Project = {
    //card
    cardTitle: string
    cardImage: string
+   cardGif: string
    cardTool: string
+   color: string
    //page
    heading: string
    subtitle: string
@@ -35,7 +37,9 @@ export const projects: Project[] = [
         //Card
         cardTitle: "01_sol-swap",
         cardImage: "/SwapCardImg.png",
+        cardGif: "/swapCardGif.gif",
         cardTool:"React · TypeScript · Solana",
+        color: "#372c2d",
         //Page
         heading: "Sol Swap",
         subtitle: "A dApp for swapping SOL and USDC on mainnet",
@@ -109,7 +113,9 @@ export const projects: Project[] = [
         //Card
         cardTitle: "02_wallet-dashboard",
         cardImage: "/WalletCardImg.png",
+        cardGif: "/WalletCardImg.png",
         cardTool:"React · TypeScript · Solana",
+        color: "#3f3233",
         //Page
         heading: "Wallet Dashboard",
         subtitle: "A Solana dApp for viewing your wallet in real time",

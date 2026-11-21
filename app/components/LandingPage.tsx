@@ -2,11 +2,15 @@
 import React from 'react'
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import { FaRegCircle, FaCircle } from "react-icons/fa6";
+import ProjectStack from './ProjectStack';
 
 function LandingPage() {
   return (
-    <div className='flex flex-col flex-1 gap-7 justify-evenly items-center w-full'>
-        <div className='w-[90%] text-center'>
+    <div className='flex flex-col flex-1 justify-evenly items-center w-full'>
+
+        {/* Scroll div */}
+        <ProjectStack>
+        <div className='w-[90%] text-center pt-10'>
             <p className='text-xs text-[var(--green)] mb-5'>
               AVAILABLE FOR OPPORTUNITIES
             </p>
@@ -18,12 +22,7 @@ function LandingPage() {
             React · Typescript · Solana
             </h2>
         </div>
-
-        {/* Scroll div */}
-        <div className='bg-[var(--darkBrown)] flex flex-col justify-between items-center p-3 rounded-xl w-[90%] h-full md:w-[65%] xl:w-[55%]'>
-           
-
-        </div>
+        </ProjectStack>
 
     </div>
   )
