@@ -8,7 +8,7 @@ function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className='flex justify-between items-center w-full h-14 border-b border-b-[var(--foreground)] text-[var(--foreground)]'>
+    <div className='flex justify-between items-center w-[98vw] mx-auto h-14 border-b border-b-[var(--foreground)] text-[var(--foreground)]'>
         <span className='text-sm'>ALVA JONSSON</span>
 
         <div className='md:hidden'>
@@ -32,7 +32,7 @@ function Navigation() {
         
             <div
             aria-hidden={!isOpen} 
-            className={`fixed inset-0 z-5 flex flex-col justify-center items-end p-5 px-[5%] gap-5 bg-[var(--background)]/60 backdrop-blur-xs left-0 top-0 w-full h-full transition-opacity duration-500 ease-out md:hidden ${
+            className={`fixed top-0 inset-0 z-5 flex flex-col justify-center items-end p-5 px-[5%] gap-5 bg-[var(--background)]/80 backdrop-blur-xs left-0 top-0 w-full h-full transition-opacity duration-500 ease-out md:hidden ${
                 isOpen ? 'opacity-100' : 'invisible opacity-0'
             }`}>
                <a href="#home" className='text-xl' onClick={() => setIsOpen(false)}>HOME</a>
